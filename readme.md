@@ -2,6 +2,7 @@
 
 ---
 
+## all password: SSaa0000
 ## admin:
 
 --- userName : Mahadi Molla
