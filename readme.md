@@ -3,6 +3,7 @@
 ---
 
 ## all password: SSaa0000
+
 ## admin:
 
 --- userName : Mahadi Molla
@@ -42,13 +43,13 @@ email : israt@gmail.com ---
 
 ---
 
-https://summer-camp-server-14hak.vercel.app/
+http://localhost:3000/
 
 - summer camp client.:
 
 ---
 
-https://summer-fe021-camp.web.app
+//wait for it
 
 ===================================================
 

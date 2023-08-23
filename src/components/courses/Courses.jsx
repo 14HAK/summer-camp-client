@@ -4,11 +4,13 @@ import useGetSingleCourse from '../../hooks/useGetSingleCourse';
 
 const Courses = () => {
   const [isLoading, error, data] = useGetApprovedCourse();
+  // console.log(data);
 
   const [fetchSingleCourse] = useGetSingleCourse();
 
   const handleSingleCourse = (id) => {
     // console.log(id);
+
     fetchSingleCourse(id);
   };
 

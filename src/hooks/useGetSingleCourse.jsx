@@ -5,7 +5,10 @@ import useAxiosIntercept from './useAxiosIntercept';
 
 const useGetSingleCourse = () => {
   const { user, setCourseData } = useContext(MyContext);
+  // console.log(user);
+
   const [axiosSecure] = useAxiosIntercept();
+
   const fetchSingleCourse = async (id) => {
     const res = await axiosSecure.get(
       `/course/details${id}?email=${user?.email}`
