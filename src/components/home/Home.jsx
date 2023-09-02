@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import SingleCourse from '../courses/singleCourse/SingleCourse';
 import SingleInstructor from '../instructors/singleInstructors/SingleInstructor';
 import useGetApprovedCourse from '../../hooks/useGetApprovedCourse';
+import Contact from './contact/Contact';
+import Steps from './steps/Steps';
+import Channel from './channel/Channel';
 
 const Home = () => {
   const [isLoading, error, data] = useGetApprovedCourse();
@@ -16,14 +19,14 @@ const Home = () => {
   return (
     <div className='min-h-screen'>
       {/* slider or carosel  */}
-      <section className='py-20 w-full'>
+      <section className='w-full'>
         <Slider></Slider>
       </section>
 
       {/* about section short  */}
-      <section className='py-20 w-full bg-[#FFFBEE]'>
+      <section className='py-10 w-full bg-orange-50'>
         {/* section title  */}
-        <div className='w-8/12 mx-auto pb-10 flex flex-col items-center text-center'>
+        <div className='w-8/12 mx-auto py-10 flex flex-col items-center text-center'>
           <h1 className='uppercase text-[#101828] title-font pb-5 sm:text-3xl text-3xl font-medium font-logoFont'>
             about kid development
           </h1>
@@ -36,7 +39,7 @@ const Home = () => {
 
         {/* section steps  */}
         {/* TODO: when data available replace this card dynamically */}
-        <div className='w-12/12 mx-auto pb-10 grid sm:grid-cols-1 lg:grid-cols-3 px-40 gap-10 text-center'>
+        <div className='w-12/12 mx-auto pb-10 grid sm:grid-cols-1 lg:grid-cols-3 px-5 gap-10 text-center'>
           {/* itm-1  */}
           <div className='flex flex-col text-center w-full'>
             <h1 className='text-6xl font-bold font-logoFont title-font text-red-500'>
@@ -86,7 +89,6 @@ const Home = () => {
             </p>
           </div>
         </div>
-
         {/* expert section */}
         {/* TODO: when data available replace this card dynamically */}
         <div className='w-12/12 mx-auto pb-10 bg-slate-100 p-10 text-center'>
@@ -357,10 +359,12 @@ const Home = () => {
         </div>
       </section>
 
+      <Steps></Steps>
+
       {/* academic course section */}
       {/* TODO: when data available replace this dynamically */}
-      <section className='py-20 w-full'>
-        <div className='w-8/12 mx-auto pb-10 flex flex-col items-center text-center'>
+      <section className=' w-full'>
+        <div className='w-8/12 mx-auto py-10 flex flex-col items-center text-center'>
           <h1 className='uppercase text-[#101828] title-font pb-5 sm:text-3xl text-3xl font-medium font-logoFont'>
             courses
           </h1>
@@ -392,7 +396,7 @@ const Home = () => {
       {/* academic instructor course section */}
       {/* TODO: when data available replace this dynamically */}
       <section className='pb-20 w-full'>
-        <div className='w-8/12 mx-auto pb-10 flex flex-col items-center text-center'>
+        <div className='w-8/12 mx-auto py-10 flex flex-col items-center text-center'>
           <h1 className='uppercase text-[#101828] title-font pb-5 sm:text-3xl text-3xl font-medium font-logoFont'>
             our instructors
           </h1>
@@ -419,6 +423,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <Contact></Contact>
+      <Channel></Channel>
     </div>
   );
 };
