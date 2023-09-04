@@ -8,7 +8,7 @@ const useAddCart = () => {
   // console.log(user);
   const [axiosSecure] = useAxiosIntercept();
   const postCourse = async (data) => {
-    const res = await axiosSecure.post(`addcart?email=${user?.email}`, {
+    const res = await axiosSecure.post(`/addcart?email=${user?.email}`, {
       ...data,
       email: user?.email,
     });

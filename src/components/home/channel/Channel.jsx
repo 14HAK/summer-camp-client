@@ -1,6 +1,6 @@
 const Channel = () => {
   return (
-    <section className='text-slate-600 body-font bg-cyan-50'>
+    <section className='text-slate-600 body-font bg-red-100'>
       <div className='container px-5 py-24 mx-auto flex items-center md:flex-row flex-col'>
         <div className='flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center'>
           <h2 className='uppercase text-[#101828] title-font pb-5 sm:text-3xl text-3xl font-medium font-logoFont'>

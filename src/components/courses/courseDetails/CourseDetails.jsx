@@ -10,6 +10,7 @@ const CourseDetails = () => {
   const [postCourse] = useAddCart();
 
   const handleCartAdd = (data) => {
+    delete data['_id'];
     postCourse(data);
   };
   return (

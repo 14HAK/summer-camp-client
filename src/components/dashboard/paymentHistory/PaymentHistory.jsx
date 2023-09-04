@@ -1,4 +1,20 @@
+import axios from 'axios';
+import useAxiosIntercept from '../../../hooks/useAxiosIntercept';
+import { useQuery } from '@tanstack/react-query';
+
 const PaymentHistory = () => {
+  const [axiosSecure] = useAxiosIntercept();
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['paymentHistory'],
+    queryFn: async () => {
+      const response = await axios.get(`/payhistory`);
+      return response?.data;
+    },
+  });
+
+  console.log(data);
+
   return (
     <div className='h-full w-full'>
       <div className='w-[100%] bg-white shadow-lg rounded-sm border border-gray-200'>

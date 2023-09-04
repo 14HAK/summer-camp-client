@@ -4,7 +4,11 @@ import useFetchCartData from '../../../hooks/useFetchCartData';
 
 const MyCart = () => {
   const [, cart] = useFetchCartData();
-  console.log(cart);
+
+  const totalPrice = cart.reduce(
+    (pre, cur) => pre + parseInt(cur?.coursePrice),
+    0
+  );
 
   return (
     <div className='h-full w-full'>
@@ -13,6 +17,13 @@ const MyCart = () => {
           <div className='flex justify-between items-center'>
             <h2 className='font-bold text-xl text-gray-800 capitalize'>
               my courses
+            </h2>
+            <h2 className='font-bold text-xl text-gray-800 capitalize'>
+              Total price:{' '}
+              <span className='font-normal text-md text-green-500'>
+                {totalPrice}
+              </span>{' '}
+              $
             </h2>
             <Link to={'/dashboard/checkout'}>
               <button className=' rounded-lg h-6 duration-200 font-bold text-xl flex justify-between items-center px-5 py-4 text-[#ececec] capitalize bg-[#12B76A] hover:bg-[#0c884e] hover:text-white'>

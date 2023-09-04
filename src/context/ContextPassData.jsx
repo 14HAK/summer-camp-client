@@ -68,10 +68,15 @@ const ContextPassData = ({ children }) => {
         });
         axios
           .post('http://localhost:3000/jwt', {
-            email: currentUser?.email,
+            email: user?.email,
           })
           .then((resData) => {
             const token = resData?.data?.token;
+
+            if (!token) {
+              console.log('token gayeb');
+            }
+            // console.log(token);
             localStorage.setItem('accessToken', token);
           });
       } else {

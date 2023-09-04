@@ -80,6 +80,14 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
+        path: '/dashboard',
+        element: (
+          <h1 className='bg-yellow-100 text-slate-600 p-20 capitalize rounded-full font-extrabold text-4xl'>
+            Welcome to Dashboard
+          </h1>
+        ),
+      },
+      {
         path: '/dashboard/manageclasses',
         element: (
           <Admin>
