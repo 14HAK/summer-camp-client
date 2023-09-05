@@ -20,7 +20,7 @@ const CheckOut = () => {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch(
-      'https://summer-camp-server-omega-five.vercel.app/create-payment-intent',
+      'https://summer-camp-server-gug1twojs-14hak.vercel.app/create-payment-intent',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

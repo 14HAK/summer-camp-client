@@ -67,7 +67,7 @@ const ContextPassData = ({ children }) => {
           user_role: 'basic',
         });
         axios
-          .post('https://summer-camp-server-omega-five.vercel.app/jwt', {
+          .post('https://summer-camp-server-gug1twojs-14hak.vercel.app/jwt', {
             email: user?.email,
           })
           .then((resData) => {
