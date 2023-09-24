@@ -9,6 +9,7 @@ const useAdminApproved = () => {
   const [refetch] = useGetRawData();
 
   const approvedCourse = async (id, courseStatus) => {
+    await user;
     const res = await axiosSecure.patch(
       `/course-approved/${courseStatus}?email=${user?.email}&id=${id}`
     );

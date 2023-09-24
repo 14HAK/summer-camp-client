@@ -9,6 +9,7 @@ const useGetAllUsers = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['adminUsers'],
     queryFn: async () => {
+      await user;
       const res = await axiosSecure.get(`/manageUser?email=${user?.email}`);
       return res?.data;
     },

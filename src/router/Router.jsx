@@ -12,7 +12,7 @@ import Contact from '../components/contact/Contact';
 import Signin from '../components/signin/Signin';
 import Demo from '../components/demo/Demo';
 import Signup from '../components/signUp/Signup';
-import Dashboard from '../layouts/Dashboard';
+// import Dashboard from '../layouts/Dashboard';
 import ManageClasses from '../components/dashboard/manageClasses/ManageClasses';
 import ManageUsers from '../components/dashboard/manageUsers/ManageUsers';
 import AddCourse from '../components/dashboard/addCourse/AddCourse';
@@ -23,6 +23,9 @@ import CheckOut from '../components/dashboard/checkOut/CheckOut';
 import Instructor from '../private/Instructor';
 import Admin from '../private/Admin';
 import Basic from '../private/Basic';
+import { Suspense, lazy } from 'react';
+
+const Dashboard = lazy(() => import('../layouts/Dashboard'));
 
 const router = createBrowserRouter([
   {
@@ -77,7 +80,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>,
+    element: (
+      <Suspense fallback={<p>loading...</p>}>
+        <Dashboard></Dashboard>
+      </Suspense>
+    ),
     children: [
       {
         path: '/dashboard',

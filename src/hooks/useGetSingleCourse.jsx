@@ -10,6 +10,7 @@ const useGetSingleCourse = () => {
   const [axiosSecure] = useAxiosIntercept();
 
   const fetchSingleCourse = async (id) => {
+    await user;
     const res = await axiosSecure.get(
       `/course/details${id}?email=${user?.email}`
     );

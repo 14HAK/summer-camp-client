@@ -385,7 +385,7 @@ const Home = () => {
 
         {/* all cards  */}
         {/* TODO: when data available replace this dynamically only show 3 cards beacause its home page */}
-        <div className='grid sm:grid-cols-1 bg-orange-50 px-20 py-10 lg:grid-cols-3 items-center justify-center gap-5'>
+        <div className='grid sm:grid-cols-1 bg-orange-50 lg:px-20 lg:py-10 lg:grid-cols-3 items-center justify-center gap-5'>
           {/* card-1 show course minimum 3 cards */}
           {sliceCourse?.map((everyCard, index) => (
             <SingleCourse key={index} data={everyCard}></SingleCourse>
@@ -416,7 +416,7 @@ const Home = () => {
 
         {/* all cards  */}
         {/* TODO: when data available replace this dynamically only show 3 cards beacause its home page */}
-        <div className='grid sm:grid-cols-1 bg-orange-50 px-20 py-10 lg:grid-cols-3 items-center justify-center gap-5'>
+        <div className='grid sm:grid-cols-1 bg-orange-50 lg:px-20 lg:py-10 lg:grid-cols-3 items-center justify-center gap-5'>
           {/* card-1 show instructor course minimum 3 cards */}
           {sliceCourse?.map((everyCard, index) => (
             <SingleInstructor key={index} data={everyCard}></SingleInstructor>

@@ -8,6 +8,7 @@ const useGetInstructors = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['uiCourses'],
     queryFn: async () => {
+      await user;
       const res = await axiosSecure.get(`/instructors?email=${user?.email}`);
       return res?.data;
     },

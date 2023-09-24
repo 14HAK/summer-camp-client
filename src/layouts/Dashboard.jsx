@@ -34,7 +34,7 @@ const Dashboard = () => {
         <div className='drawer lg:drawer-open'>
           <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
           <div className='drawer-content flex flex-col items-center justify-center'>
-            <div className='w-[100%] min-h-screen overflow-y-auto bg-[#FFFBEE] p-20 flex justify-center items-center lg:p-10'>
+            <div className='w-[100%] min-h-screen overflow-y-auto bg-[#FFFBEE] p-5 flex justify-center items-center lg:p-10'>
               {/* main content here  */}
               <Outlet></Outlet>
             </div>

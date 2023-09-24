@@ -9,6 +9,7 @@ const useGetInstructorCourse = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['course'],
     queryFn: async () => {
+      await user;
       const res = await axiosSecure.get(`/rawcourse?email=${user?.email}`);
       return res?.data;
     },

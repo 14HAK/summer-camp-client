@@ -9,6 +9,7 @@ const useGetRawData = () => {
   const { refetch, isLoading, error, data } = useQuery({
     queryKey: ['adminRawData'],
     queryFn: async () => {
+      await user;
       const res = await axiosSecure.get(`/managecourse?email=${user?.email}`);
       return res?.data;
     },
