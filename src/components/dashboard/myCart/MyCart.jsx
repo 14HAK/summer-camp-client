@@ -1,14 +1,19 @@
 import { FaCreditCard } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import useFetchCartData from '../../../hooks/useFetchCartData';
+import Loading from '../../loader/Loading';
+import NotFound from '../../404/NotFound';
 
 const MyCart = () => {
-  const [, cart] = useFetchCartData();
+  const [, cart, isLoading, isError] = useFetchCartData();
 
   const totalPrice = cart.reduce(
     (pre, cur) => pre + parseInt(cur?.coursePrice),
     0
   );
+
+  if (isLoading) return <Loading></Loading>;
+  if (isError) return <NotFound></NotFound>;
 
   return (
     <div className='h-full w-full'>

@@ -6,7 +6,13 @@ import { useQuery } from '@tanstack/react-query';
 const useFetchCartData = () => {
   const { user } = useContext(MyContext);
   const [axiosSecure] = useAxiosIntercept();
-  const { refetch, data: cart = [] } = useQuery({
+  const {
+    refetch,
+    data: cart = [],
+    isLoading,
+    isError,
+    isSuccess,
+  } = useQuery({
     queryKey: ['cartData'],
     queryFn: async () => {
       await user;
@@ -15,7 +21,7 @@ const useFetchCartData = () => {
     },
   });
 
-  return [refetch, cart];
+  return [refetch, cart, isLoading, isError, isSuccess];
 };
 
 export default useFetchCartData;

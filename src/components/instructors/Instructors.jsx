@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import useGetInstructorCourse from '../../hooks/useGetInstructorCourse';
+import Loading from '../loader/Loading';
+import NotFound from '../404/NotFound';
 
 const Instructors = () => {
   const [isLoading, error, data] = useGetInstructorCourse();
-  console.log(data);
+  // console.log(data);
+
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <NotFound></NotFound>;
 
   return (
     <div className='bg-[#FFFBEE]'>

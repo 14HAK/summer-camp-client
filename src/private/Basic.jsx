@@ -8,16 +8,11 @@ const Basic = ({ children }) => {
 
   let location = useLocation();
 
-  if (isLoading) {
-    <Loading></Loading>;
-  }
-
-  if (error) {
-    <NotFound></NotFound>;
-  }
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <NotFound></NotFound>;
 
   if (!data?.user_role) {
-    <Navigate to='/login' state={{ from: location }} replace />;
+    return <Navigate to='/login' state={{ from: location }} replace />;
   }
 
   if (data?.user_role === 'basic') {

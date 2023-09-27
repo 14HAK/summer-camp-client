@@ -15,6 +15,7 @@ const useGetInstructors = () => {
   });
 
   return [isLoading, error, data];
+  //
 };
 
 export default useGetInstructors;

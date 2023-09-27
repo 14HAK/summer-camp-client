@@ -5,7 +5,7 @@ import useAxiosIntercept from './useAxiosIntercept';
 
 const useGetSingleCourse = () => {
   const { user, setCourseData } = useContext(MyContext);
-  console.log(user);
+  // console.log(user);
 
   const [axiosSecure] = useAxiosIntercept();
 
@@ -19,5 +19,5 @@ const useGetSingleCourse = () => {
 
   return [fetchSingleCourse];
 };
-
+//
 export default useGetSingleCourse;

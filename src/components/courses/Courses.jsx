@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import useGetApprovedCourse from '../../hooks/useGetApprovedCourse';
 import useGetSingleCourse from '../../hooks/useGetSingleCourse';
+import Loading from '../loader/Loading';
+import NotFound from '../404/NotFound';
 
 const Courses = () => {
   const [isLoading, error, data] = useGetApprovedCourse();
@@ -10,9 +12,11 @@ const Courses = () => {
 
   const handleSingleCourse = (id) => {
     // console.log(id);
-
     fetchSingleCourse(id);
   };
+
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <NotFound></NotFound>;
 
   return (
     <div className='bg-[#FFFBEE]'>

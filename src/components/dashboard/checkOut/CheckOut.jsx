@@ -3,14 +3,15 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from '../myCart/CheckoutForm';
 import useFetchCartData from '../../../hooks/useFetchCartData';
+import Loading from '../../loader/Loading';
+import NotFound from '../../404/NotFound';
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIP_PK);
 
 const CheckOut = () => {
   const [clientSecret, setClientSecret] = useState('');
   // console.log(clientSecret);
-
-  const [, cart] = useFetchCartData();
+  const [, cart, isLoading, isError] = useFetchCartData();
 
   const totalPrice = cart.reduce(
     (pre, cur) => pre + parseInt(cur?.coursePrice),
@@ -30,6 +31,9 @@ const CheckOut = () => {
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
   }, [totalPrice]);
+
+  if (isLoading) return <Loading></Loading>;
+  if (isError) return <NotFound></NotFound>;
 
   const appearance = {
     theme: 'stripe',

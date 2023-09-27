@@ -10,11 +10,16 @@ import useGetApprovedCourse from '../../hooks/useGetApprovedCourse';
 import Contact from './contact/Contact';
 import Steps from './steps/Steps';
 import Channel from './channel/Channel';
+import Loading from '../loader/Loading';
+import NotFound from '../404/NotFound';
 
 const Home = () => {
   const [isLoading, error, data] = useGetApprovedCourse();
   const sliceCourse = data?.slice(2, 5);
   // console.log(sliceCourse);
+
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <NotFound></NotFound>;
 
   return (
     <div className='min-h-screen'>

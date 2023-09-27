@@ -6,6 +6,7 @@ import useAxiosIntercept from './useAxiosIntercept';
 const useGetAllUsers = () => {
   const { user } = useContext(MyContext);
   const [axiosSecure] = useAxiosIntercept();
+
   const { isLoading, error, data } = useQuery({
     queryKey: ['adminUsers'],
     queryFn: async () => {

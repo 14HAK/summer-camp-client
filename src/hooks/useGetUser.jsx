@@ -17,5 +17,5 @@ const useGetUser = () => {
 
   return [isLoading, error, data];
 };
-
+//
 export default useGetUser;
