@@ -12,7 +12,7 @@ const Basic = ({ children }) => {
   if (error) return <NotFound></NotFound>;
 
   if (!data?.user_role) {
-    return <Navigate to='/login' state={{ from: location }} replace />;
+    <Navigate to='/login' state={{ from: location }} replace />;
   }
 
   if (data?.user_role === 'basic') {

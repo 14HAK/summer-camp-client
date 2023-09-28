@@ -3,7 +3,7 @@ import axios from 'axios';
 const useAxiosIntercept = () => {
   //
   const axiosSecure = axios.create({
-    baseURL: 'https://summer-camp-server-omega-five.vercel.app/',
+    baseURL: 'http://localhost:3000/',
   });
   //
   // Request interceptor

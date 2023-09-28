@@ -3,14 +3,20 @@ import { Link } from 'react-router-dom';
 import useFetchCartData from '../../../hooks/useFetchCartData';
 import Loading from '../../loader/Loading';
 import NotFound from '../../404/NotFound';
+import useDeleteCart from '../../../hooks/useDeleteCart';
 
 const MyCart = () => {
   const [, cart, isLoading, isError] = useFetchCartData();
+  const [deleteCourse] = useDeleteCart();
 
   const totalPrice = cart.reduce(
     (pre, cur) => pre + parseInt(cur?.coursePrice),
     0
   );
+
+  const handleDelete = (id) => {
+    deleteCourse(id);
+  };
 
   if (isLoading) return <Loading></Loading>;
   if (isError) return <NotFound></NotFound>;
@@ -96,7 +102,10 @@ const MyCart = () => {
                       </td>
                       <td className='p-2 whitespace-nowrap'>
                         <Link to={''}>
-                          <button className=' rounded-lg h-6 duration-200 font-bold text-xs px-5 text-[#2b2b2b] capitalize bg-[#F04438] hover:bg-[#c7170b] hover:text-white'>
+                          <button
+                            onClick={() => handleDelete(cartItem?._id)}
+                            className=' rounded-lg h-6 duration-200 font-bold text-xs px-5 text-[#2b2b2b] capitalize bg-[#F04438] hover:bg-[#c7170b] hover:text-white'
+                          >
                             delete
                           </button>
                         </Link>

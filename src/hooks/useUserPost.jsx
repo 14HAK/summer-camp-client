@@ -3,7 +3,7 @@ import axios from 'axios';
 const useUserPost = () => {
   const postUserDB = (data) => {
     axios
-      .post('https://summer-camp-server-omega-five.vercel.app/alluser', {
+      .post('http://localhost:3000/alluser', {
         ...data,
       })
       .then((res) => console.log(res?.data))
