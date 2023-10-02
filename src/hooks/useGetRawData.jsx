@@ -6,7 +6,12 @@ import useAxiosIntercept from './useAxiosIntercept';
 const useGetRawData = () => {
   const { user } = useContext(MyContext);
   const [axiosSecure] = useAxiosIntercept();
-  const { refetch, isLoading, error, data } = useQuery({
+  const {
+    refetch,
+    isLoading,
+    error,
+    data: data = [],
+  } = useQuery({
     queryKey: ['adminRawData'],
     queryFn: async () => {
       await user;

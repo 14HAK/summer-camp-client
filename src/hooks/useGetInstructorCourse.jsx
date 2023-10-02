@@ -6,7 +6,11 @@ import useAxiosIntercept from './useAxiosIntercept';
 const useGetInstructorCourse = () => {
   const { user } = useContext(MyContext);
   const [axiosSecure] = useAxiosIntercept();
-  const { isLoading, error, data } = useQuery({
+  const {
+    isLoading,
+    error,
+    data: data = [],
+  } = useQuery({
     queryKey: ['course'],
     queryFn: async () => {
       await user;

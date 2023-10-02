@@ -3,7 +3,11 @@ import useAxiosIntercept from './useAxiosIntercept';
 
 const useGetApprovedCourse = () => {
   const [axiosSecure] = useAxiosIntercept();
-  const { isLoading, error, data } = useQuery({
+  const {
+    isLoading,
+    error,
+    data: data = [],
+  } = useQuery({
     queryKey: ['uiCourses'],
     queryFn: async () => {
       const res = await axiosSecure.get(`/courses`);
