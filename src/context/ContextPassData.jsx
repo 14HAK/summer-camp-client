@@ -17,7 +17,7 @@ import useUserPost from '../hooks/useUserPost';
 export const MyContext = createContext(null);
 
 const ContextPassData = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState([]);
   const [customError, setCustomError] = useState(null);
   const [postUserDB] = useUserPost();
   const [courseData, setCourseData] = useState();

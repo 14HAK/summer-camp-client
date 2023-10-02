@@ -1,11 +1,5 @@
-import React from 'react';
-
 const Demo = () => {
-  return (
-    <div>
-      <p>demo div </p>
-    </div>
-  );
+  return <div>footer</div>;
 };
 
 export default Demo;
