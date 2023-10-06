@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <section className=' bg-[#FFF2CC] sticky top-0 z-30 font-semibold body-font'>
+      <section className=' bg-[#FFF2CC] md:sticky  top-0 z-30 font-semibold body-font'>
         <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
           <Link
             to={'/'}
