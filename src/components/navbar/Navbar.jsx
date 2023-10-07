@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOutUser()
       .then(() => {
-        setUser(null);
+        setUser([]);
         localStorage.removeItem('accessToken');
       })
       .catch();
