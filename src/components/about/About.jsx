@@ -24,11 +24,12 @@ const About = () => {
                 </div>
                 <div className='flex-grow pl-4'>
                   <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                    STEP 1
+                    Skill-Building Fun
                   </h2>
                   <p className='leading-relaxed'>
-                    VHS cornhole pop-up, try-hard 8-bit iceland helvetica.
-                    Kinfolk bespoke try-hard cliche palo santo offal.
+                    At our camp, kids have a blast while improving their skills.
+                    They can choose from activities like coding, robotics, and
+                    creative arts, ensuring that learning is exciting.
                   </p>
                 </div>
               </div>
@@ -51,11 +52,13 @@ const About = () => {
                 </div>
                 <div className='flex-grow pl-4'>
                   <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                    STEP 2
+                    Connected Communities
                   </h2>
                   <p className='leading-relaxed'>
-                    Vice migas literally kitsch +1 pok pok. Truffaut hot chicken
-                    slow-carb health goth, vape typewriter.
+                    Our campers form meaningful connections with peers, both in
+                    person and online. Through collaborative projects and
+                    digital platforms, they build friendships that extend beyond
+                    the summer.
                   </p>
                 </div>
               </div>
@@ -79,11 +82,12 @@ const About = () => {
                 </div>
                 <div className='flex-grow pl-4'>
                   <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                    STEP 3
+                    Empowerment and Growth
                   </h2>
                   <p className='leading-relaxed'>
-                    Coloring book nar whal glossier master cleanse umami. Salvia
-                    +1 master cleanse blog taiyaki.
+                    Campers are encouraged to take on leadership roles and
+                    express their ideas. This empowers them to develop a growth
+                    mindset and take charge of their own learning journey.
                   </p>
                 </div>
               </div>
@@ -107,11 +111,12 @@ const About = () => {
                 </div>
                 <div className='flex-grow pl-4'>
                   <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                    STEP 4
+                    Mentors in Tech
                   </h2>
                   <p className='leading-relaxed'>
-                    VHS cornhole pop-up, try-hard 8-bit iceland helvetica.
-                    Kinfolk bespoke try-hard cliche palo santo offal.
+                    Experienced mentors, including tech-savvy counselors, guide
+                    kids in digital literacy and tech-based projects. This
+                    mentorship helps them develop 21st-century skills.
                   </p>
                 </div>
               </div>
@@ -132,18 +137,20 @@ const About = () => {
                 </div>
                 <div className='flex-grow pl-4'>
                   <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                    FINISH
+                    Tech Adventures
                   </h2>
                   <p className='leading-relaxed'>
-                    Pitchfork ugh tattooed scenester echo park gastropub
-                    whatever cold-pressed retro.
+                    We explore the digital world through virtual reality,
+                    augmented reality, and other cutting-edge tech adventures.
+                    Kids gain a deeper understanding of technology's impact on
+                    our lives.
                   </p>
                 </div>
               </div>
             </div>
             <img
               className='lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12'
-              src='https://dummyimage.com/1200x500'
+              src='https://www.parents.com/thmb/O9qCmx9_ZqxyHawVgLaDQ9jBry4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1016070420-ddafe4397177449cbe1165a1b7595e74.jpg'
               alt='step'
             />
           </div>

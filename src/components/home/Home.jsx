@@ -400,7 +400,7 @@ const Home = () => {
 
       {/* academic instructor course section */}
       {/* TODO: when data available replace this dynamically */}
-      <section className='pb-20 w-full'>
+      <section className=' w-full'>
         <div className='w-8/12 mx-auto py-10 flex flex-col items-center text-center'>
           <h1 className='uppercase text-[#101828] title-font pb-5 sm:text-3xl text-3xl font-medium font-logoFont'>
             our instructors
@@ -411,8 +411,11 @@ const Home = () => {
             providing an enriching experience for every child.
             <small className='font-normal text-md'>
               <Link to={'/instructors'}>
-                <button className='ms-2 rounded-lg w-40 h-6 duration-200 font-bold text-xs py-1 px-5 text-[#2b2b2b] capitalize bg-[#FFC000] hover:bg-[#12B76A] hover:text-white'>
-                  instructor courses
+                <button
+                  disabled
+                  className='ms-2 rounded-lg w-40 h-6 duration-200 font-bold text-xs py-1 px-5 text-[#2b2b2b] capitalize bg-[#FFC000] disabled hover:bg-[#12B76A] hover:text-white'
+                >
+                  instructor
                 </button>
               </Link>
             </small>

@@ -49,8 +49,9 @@ const Navbar = () => {
               courses
             </Link>
             <Link
+              disabled
               to={'/instructors'}
-              className='mr-5 cursor-pointer hover:text-[#FFC000] hover:underline'
+              className='mr-5 hidden cursor-pointer hover:text-[#FFC000] hover:underline'
             >
               instructors
             </Link>

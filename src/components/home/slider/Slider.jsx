@@ -17,10 +17,13 @@ const Slider = () => {
 
             <div className='absolute top-[10%] left-[15%] lg:top-[40%] lg:left-[10%]'>
               <h2 className='text-3xl lg:text-4xl text-slate-200 font-bold font-logoFont w-12/12 lg:w-8/12'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis.
+                Fostering curiosity in kids empowers them to explore, learn, and
+                think critically.
               </h2>
-              <button className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#101828]  bg-[#FFC000] text-[#101828] rounded-lg hover:ring-1  ml-1  duration-300'>
+              <button
+                disabled
+                className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#101828]  bg-[#FFC000] text-[#101828] rounded-lg hover:ring-1  ml-1  duration-300'
+              >
                 sign out
               </button>
             </div>
@@ -46,10 +49,13 @@ const Slider = () => {
             />
             <div className='absolute top-[10%] left-[15%] lg:top-[40%] lg:left-[10%]'>
               <h2 className='text-3xl lg:text-4xl text-slate-200 font-bold font-logoFont w-12/12 lg:w-8/12'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis.
+                Promoting empathy in children shaping compassionate and socially
+                responsible individuals.
               </h2>
-              <button className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#2b2b2b]  bg-[#FFC000] text-[#2b2b2b] rounded-lg hover:ring-1  ml-1  duration-300'>
+              <button
+                disabled
+                className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#2b2b2b]  bg-[#FFC000] text-[#2b2b2b] rounded-lg hover:ring-1  ml-1  duration-300'
+              >
                 sign out
               </button>
             </div>
@@ -76,10 +82,13 @@ const Slider = () => {
           </div>
           <div className='absolute top-[10%] left-[15%] lg:top-[40%] lg:left-[10%]'>
             <h2 className='text-3xl lg:text-4xl text-slate-200 font-bold font-logoFont w-12/12 lg:w-8/12'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Blanditiis.
+              Teaching kids resilience equips them with the skills to tackle
+              adversity. adapt to change their future success.
             </h2>
-            <button className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#101828]  bg-[#FFC000] text-[#101828] rounded-lg hover:ring-1  ml-1  duration-300'>
+            <button
+              disabled
+              className=' mt-2 uppercase mr-2 px-3 py-1 font-semibold font-logoFont hover:bg-[#FFF2CC]  hover:text-[#101828]  bg-[#FFC000] text-[#101828] rounded-lg hover:ring-1  ml-1  duration-300'
+            >
               sign out
             </button>
           </div>

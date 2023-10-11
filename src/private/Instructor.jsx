@@ -18,6 +18,7 @@ const Instructor = ({ children }) => {
   if (data?.user_role === 'instructor') {
     return children;
   }
+  // return children;
 };
 
 export default Instructor;
