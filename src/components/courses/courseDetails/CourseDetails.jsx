@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MyContext } from '../../../context/ContextPassData';
 import useAddCart from '../../../hooks/useAddCart';
@@ -17,7 +18,12 @@ const CourseDetails = () => {
     <div className='w-full flex items-center justify-center min-h-screen'>
       {/* TODO: akhane dynamically card ta render hobe */}
 
-      <div className='bg-[#FFFBEE] flex flex-col items-center justify-center py-10 mx-auto'>
+      <motion.div
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 0, duration: 1 }}
+        className='bg-[#FFFBEE] flex flex-col items-center justify-center py-10 mx-auto'
+      >
         <div className='relative ring-1 bg-gradient-to-r from-cyan-700 to-blue-700 image w-[80%] h-[400px] rounded-t-lg bg-gray-100  overflow-hidden'>
           <img
             className='opacity-50 lg:w-2/2 w-[100%] lg:h-auto object-cover object-center rounded'
@@ -149,7 +155,7 @@ const CourseDetails = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
